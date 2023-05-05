@@ -6,6 +6,8 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		// Início do exercicio A
+		
 		Lista Prim = new Lista();
 		Lista Sec = new Lista();
 		int tamanho = 0;
@@ -42,6 +44,51 @@ public class Main {
 				// TODO: handle exception
 			}
 		}
+		
+		// Fim do exercicio A
+		
+		
+		// Inicio do exercicio B
+		
+		int[] auxiliar = new int[Terc.size()];
+		tamanho=0;
+		
+		while(!Terc.isEmpty()) {
+			try {
+				auxiliar[tamanho] = Terc.get(0);
+				Terc.removeFirst();
+				tamanho++;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		for(int j = 0; j < auxiliar.length; j++) {
+			for(int y = j+1; y < auxiliar.length; y++) {
+				if(auxiliar[j] > auxiliar[y]) {
+					int aux = auxiliar[y];
+					auxiliar[y] = auxiliar[j];
+					auxiliar[j] = aux;
+				}	
+			}
+		}
+		tamanho = 0;
+		for(int index : auxiliar) {
+			try {
+				Terc.add(index, tamanho);
+				tamanho++;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		// Fim do exercicio B
+		
+		
+		
+		// Escrita da linha no console
+		
 		while(!Terc.isEmpty()) {
 			try {
 				System.out.println(Terc.get(0));
