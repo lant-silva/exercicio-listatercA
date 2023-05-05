@@ -20,7 +20,9 @@ Exercicio A:
 
 
 
+
 Exercicio B:
+
 
 
 
